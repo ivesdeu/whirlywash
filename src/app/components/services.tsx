@@ -2,11 +2,11 @@ import { motion } from 'motion/react';
 import { ServiceCard } from './service-card';
 
 // Use your custom service images from public/assets folder
-const windowCleaningImage = '/assets/Exterior window cleaning.JPEG';
-const interiorWindowImage = '/assets/Interior window cleaning.jpeg';
-const screenCleaningImage = '/assets/screen cleaning.JPG';
-const skylightCleaningImage = '/assets/Skylight cleaning.JPEG';
-const powerWashingImage = '/assets/powerwashing.JPEG';
+const windowCleaningImage = '/images/Exterior_window_cleaning.JPEG';
+const interiorWindowImage = '/images/Interior_window_cleaning.jpeg';
+const screenCleaningImage = '/images/screen_cleaning.JPG';
+const skylightCleaningImage = '/images/Skylight_cleaning.JPEG';
+const powerWashingImage = '/images/powerwashing.JPEG';
 
 // Fallback images for preview (will use your real images on Netlify)
 const windowCleaningFallback = 'https://images.unsplash.com/photo-1761689502577-0013be84f1bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleHRlcmlvciUyMHdpbmRvdyUyMGNsZWFuaW5nJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MjQ3NTYxNnww&ixlib=rb-4.1.0&q=80&w=1080';

@@ -1,9 +1,8 @@
 import { motion } from 'motion/react';
 import { Phone, ArrowRight, Check } from 'lucide-react';
 import { Button } from './ui/button';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 
-// Hero image URL – served from site origin (e.g. https://yoursite.com/images/Hero_Image.jpg)
+// Use your custom hero image from public/assets folder
 const heroImage = '/images/Hero_Image.jpg';
 
 export function Hero() {
@@ -89,7 +88,7 @@ export function Hero() {
             className="relative"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <ImageWithFallback
+              <img
                 src={heroImage}
                 alt="Clean residential windows"
                 className="w-full h-[500px] object-cover"

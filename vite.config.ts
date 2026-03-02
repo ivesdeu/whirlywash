@@ -33,7 +33,12 @@ export default defineConfig({
         },
       },
     },
-    // Use default esbuild minifier (terser not installed)
-    minify: 'esbuild',
+    // Minify and compress
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.logs in production
+      },
+    },
   },
 })

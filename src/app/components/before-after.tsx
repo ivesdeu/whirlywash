@@ -4,10 +4,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 
 // Use your custom before/after images from public/assets folder
-const beforeImage1 = '/assets/DSC_1527.JPG';
-const afterImage1 = '/assets/DSC_1973.JPG';
-const beforeImage2 = '/assets/DSC_1994.JPG';
-const afterImage2 = '/assets/2025-08-25.jpg';
+const beforeImage1 = '/images/DSC_1527.JPG';
+const afterImage1 = '/images/DSC_1973.JPG';
+const beforeImage2 = '/images/DSC_1994.JPG';
+const afterImage2 = '/images/2025-08-25.jpg';
 
 export function BeforeAfter() {
   const [currentSlide, setCurrentSlide] = useState(0);
