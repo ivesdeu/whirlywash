@@ -3,8 +3,8 @@ import { Phone, ArrowRight, Check } from 'lucide-react';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-// Use your custom hero image from public/assets folder
-const heroImage = '/assets/Hero Image.jpg';
+// Hero image URL – served from site origin (e.g. https://yoursite.com/images/Hero_Image.jpg)
+const heroImage = '/images/Hero_Image.jpg';
 
 export function Hero() {
   const scrollToEstimate = () => {
