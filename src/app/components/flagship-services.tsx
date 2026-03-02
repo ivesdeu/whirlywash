@@ -1,28 +1,59 @@
 import { motion } from 'motion/react';
-import { Check } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 import { Button } from './ui/button';
 
+interface PlanFeature {
+  text: string;
+  included: boolean;
+}
+
+interface Plan {
+  label: string;
+  title: string;
+  description: string;
+  features: PlanFeature[];
+  footerNote: string;
+  highlighted?: boolean;
+}
+
 export function FlagshipServices() {
-  const plans = [
+  const plans: Plan[] = [
     {
       label: 'Primary Service',
-      title: 'Bi-Annual Plans',
-      description: 'Comprehensive bi-annual service packages designed to keep your property pristine year-round with strategic seasonal maintenance and professional care.',
-      benefits: [
-        'Strategic planning & execution',
-        'Ongoing performance optimization',
-        'Dedicated support & reporting',
+      title: 'One-Time Service',
+      description: 'Single visit exterior cleaning with no recurring benefits or loyalty incentives.',
+      features: [
+        { text: 'No discount', included: false },
+        { text: 'Free RainBlock technology', included: false },
+        { text: '7-day rain guarantee', included: false },
+        { text: 'Free hard water removal (5 panes)', included: false },
       ],
+      footerNote: 'No discount. No bonus benefits.',
     },
     {
       label: 'Primary Service',
-      title: 'Quarterly Plans',
-      description: 'Structured quarterly service programs that ensure consistent maintenance excellence and continuous property enhancement through regular professional care.',
-      benefits: [
-        'Strategic planning & execution',
-        'Ongoing performance optimization',
-        'Dedicated support & reporting',
+      title: 'Bi-Annual Plan',
+      description: 'Twice-per-year professional service with seasonal maintenance savings.',
+      features: [
+        { text: '$50 off service', included: true },
+        { text: 'Free RainBlock technology', included: false },
+        { text: '7-day rain guarantee', included: false },
+        { text: 'Free hard water removal (5 panes)', included: false },
       ],
+      footerNote: 'Discount included. No bonus services.',
+    },
+    {
+      label: 'Primary Service',
+      title: 'Quarterly Plan',
+      description: 'Routine quarterly service designed for maximum protection, consistency, and premium maintenance benefits.',
+      features: [
+        { text: '$100 off service', included: true },
+        { text: 'Free RainBlock technology', included: true },
+        { text: '7-day rain guarantee', included: true },
+        { text: 'Free hard water removal', included: true },
+      ],
+      footerNote: 'Discount + bonus benefits included.',
+      highlighted: true,
     },
   ];
 
@@ -42,7 +73,7 @@ export function FlagshipServices() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <motion.div
               key={index}
@@ -50,7 +81,11 @@ export function FlagshipServices() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group relative bg-white rounded-lg border-2 border-gray-200 p-8 lg:p-10 shadow-sm hover:shadow-lg hover:border-[#1F3C88] transition-all duration-300"
+              className={`group relative bg-white rounded-lg border-2 p-8 lg:p-10 shadow-sm hover:shadow-lg transition-all duration-300 ${
+                plan.highlighted
+                  ? 'border-[#1F3C88] shadow-md'
+                  : 'border-gray-200 hover:border-[#1F3C88]'
+              }`}
             >
               {/* Eyebrow Label */}
               <div className="inline-block px-3 py-1 bg-[#1F3C88]/10 rounded-full mb-4">
@@ -69,17 +104,30 @@ export function FlagshipServices() {
                 {plan.description}
               </p>
 
-              {/* Benefits */}
-              <ul className="space-y-3 mb-8">
-                {plan.benefits.map((benefit, idx) => (
+              {/* Features */}
+              <ul className="space-y-3 mb-6">
+                {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#1F3C88]/10 flex items-center justify-center mt-0.5">
-                      <Check className="w-4 h-4 text-[#1F3C88]" />
-                    </div>
-                    <span className="text-gray-700 text-base">{benefit}</span>
+                    {feature.included ? (
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#1F3C88]/10 flex items-center justify-center mt-0.5">
+                        <Check className="w-4 h-4 text-[#1F3C88]" />
+                      </div>
+                    ) : (
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center mt-0.5">
+                        <X className="w-4 h-4 text-gray-400" />
+                      </div>
+                    )}
+                    <span className={feature.included ? 'text-gray-700 text-base' : 'text-gray-400 text-base line-through'}>
+                      {feature.text}
+                    </span>
                   </li>
                 ))}
               </ul>
+
+              {/* Footer Note */}
+              <p className={`text-sm mb-8 ${plan.highlighted ? 'text-[#1F3C88] font-semibold' : 'text-gray-500'}`}>
+                {plan.footerNote}
+              </p>
 
               {/* CTA Button */}
               <a href="#estimate">
