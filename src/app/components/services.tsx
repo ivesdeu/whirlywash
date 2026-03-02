@@ -1,5 +1,10 @@
 import { motion } from 'motion/react';
 import { ServiceCard } from './service-card';
+import windowCleaningImage from 'figma:asset/2bc2e546e3fa7ac717c02d833b99fdec7166aea5.png';
+import interiorWindowImage from 'figma:asset/ae4c2b70749b41efb37b4aec776649aa6dd47718.png';
+import screenCleaningImage from 'figma:asset/7027b1ad002627514ca6ca1d2e0249502dc53da7.png';
+import skylightCleaningImage from 'figma:asset/28599dba92dd7aace354ca6fa32855e627a1d8ed.png';
+import powerWashingImage from 'figma:asset/c8ea79bea63d8da910bb8fdff3767efc9f3ed2e3.png';
 
 export function Services() {
   const services = [
@@ -7,34 +12,36 @@ export function Services() {
       icon: '🪟',
       title: 'Exterior Window Cleaning',
       description: 'Sparkling clean windows that let the light shine through. We remove dirt, grime, and hard water stains.',
-      image: 'https://images.unsplash.com/photo-1771079258782-b7212c442141?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMHJlc2lkZW50aWFsJTIwd2luZG93cyUyMGV4dGVyaW9yfGVufDF8fHx8MTc3MjMwNDc0MXww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: windowCleaningImage,
+      objectPosition: 'object-[center_65%]',
     },
     {
-      icon: '✨',
+      icon: '',
       title: 'Interior Window Cleaning',
       description: 'Streak-free interior windows that make your home feel bright and welcoming.',
-      image: 'https://images.unsplash.com/photo-1771970472769-8038fd7309c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcmlvciUyMHdpbmRvd3MlMjBjbGVhbiUyMG1vZGVybnxlbnwxfHx8fDE3NzIzMDQ3NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: interiorWindowImage,
     },
     {
-      icon: '🔲',
+      icon: '',
       title: 'Screen Cleaning',
       description: 'Professional screen cleaning and repair service to improve air flow and visibility.',
-      image: 'https://images.unsplash.com/photo-1766943961756-1e3a9a3cb242?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY3JlZW4lMjBjbGVhbmluZyUyMHNlcnZpY2V8ZW58MXx8fHwxNzcyMzA0NzQzfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: screenCleaningImage,
+      objectPosition: 'object-[center_65%]',
     },
     {
-      icon: '🌤️',
+      icon: '',
       title: 'Skylight Cleaning',
       description: 'Safe and effective skylight cleaning that brightens up your entire home.',
-      image: 'https://images.unsplash.com/photo-1709993608671-ce1420744fc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxza3lsaWdodCUyMHdpbmRvdyUyMGdsYXNzfGVufDF8fHx8MTc3MjMwNDc0M3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: skylightCleaningImage,
     },
     {
-      icon: '💧',
+      icon: '',
       title: 'Power Washing',
       description: 'Transform your driveway, siding, and deck with our professional pressure washing services.',
-      image: 'https://images.unsplash.com/photo-1769788161278-8dc624a2d537?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aW5kb3clMjBjbGVhbmluZyUyMHNlcnZpY2UlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzcyMzA0NzQyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: powerWashingImage,
     },
     {
-      icon: '🎄',
+      icon: '',
       title: 'Holiday Lighting',
       description: 'Professional holiday lighting installation and removal. Make your home shine this season.',
       image: 'https://images.unsplash.com/photo-1765242115312-7a27f513ec03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob2xpZGF5JTIwbGlnaHRpbmclMjBjaHJpc3RtYXMlMjBob3VzZXxlbnwxfHx8fDE3NzIzMDQ3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080',

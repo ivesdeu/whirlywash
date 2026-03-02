@@ -40,31 +40,31 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-[#4A9FF5] transition-colors"
+              className="text-gray-700 hover:text-[#1F3C88] transition-colors"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('before-after')}
-              className="text-gray-700 hover:text-[#4A9FF5] transition-colors"
+              className="text-gray-700 hover:text-[#1F3C88] transition-colors"
             >
               Our Work
             </button>
             <button
               onClick={() => scrollToSection('why-choose')}
-              className="text-gray-700 hover:text-[#4A9FF5] transition-colors"
+              className="text-gray-700 hover:text-[#1F3C88] transition-colors"
             >
               Why Us
             </button>
             <button
               onClick={() => scrollToSection('testimonials')}
-              className="text-gray-700 hover:text-[#4A9FF5] transition-colors"
+              className="text-gray-700 hover:text-[#1F3C88] transition-colors"
             >
               Reviews
             </button>
             <button
               onClick={() => scrollToSection('service-area')}
-              className="text-gray-700 hover:text-[#4A9FF5] transition-colors"
+              className="text-gray-700 hover:text-[#1F3C88] transition-colors"
             >
               Service Area
             </button>
@@ -72,16 +72,14 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="tel:+15551234567" className="flex items-center gap-2 text-[#4A9FF5]">
+            <a href="tel:+18474694068" className="flex items-center gap-2 text-[#1F3C88]">
               <Phone className="w-5 h-5" />
-              <span>(555) 123-4567</span>
+              <span>(847) 469-4068</span>
             </a>
             <Button 
               onClick={() => scrollToSection('estimate')}
-              className="bg-[#4A9FF5] hover:bg-[#3B7FD9] text-white rounded-full px-6"
-            >
-              Get Free Estimate
-            </Button>
+              className="bg-[#1F3C88] hover:bg-[#152a5e] text-white rounded-full px-6"
+            >Get&nbsp;&nbsp;Estimate</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -90,9 +88,9 @@ export function Header() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-[#4A9FF5]" />
+              <X className="w-6 h-6 text-[#1F3C88]" />
             ) : (
-              <Menu className="w-6 h-6 text-[#4A9FF5]" />
+              <Menu className="w-6 h-6 text-[#1F3C88]" />
             )}
           </button>
         </div>
@@ -103,41 +101,41 @@ export function Header() {
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => scrollToSection('services')}
-                className="text-left text-gray-700 hover:text-[#4A9FF5] transition-colors"
+                className="text-left text-gray-700 hover:text-[#1F3C88] transition-colors"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection('before-after')}
-                className="text-left text-gray-700 hover:text-[#4A9FF5] transition-colors"
+                className="text-left text-gray-700 hover:text-[#1F3C88] transition-colors"
               >
                 Our Work
               </button>
               <button
                 onClick={() => scrollToSection('why-choose')}
-                className="text-left text-gray-700 hover:text-[#4A9FF5] transition-colors"
+                className="text-left text-gray-700 hover:text-[#1F3C88] transition-colors"
               >
                 Why Us
               </button>
               <button
                 onClick={() => scrollToSection('testimonials')}
-                className="text-left text-gray-700 hover:text-[#4A9FF5] transition-colors"
+                className="text-left text-gray-700 hover:text-[#1F3C88] transition-colors"
               >
                 Reviews
               </button>
               <button
                 onClick={() => scrollToSection('service-area')}
-                className="text-left text-gray-700 hover:text-[#4A9FF5] transition-colors"
+                className="text-left text-gray-700 hover:text-[#1F3C88] transition-colors"
               >
                 Service Area
               </button>
-              <a href="tel:+15551234567" className="flex items-center gap-2 text-[#4A9FF5]">
+              <a href="tel:+18474694068" className="flex items-center gap-2 text-[#1F3C88]">
                 <Phone className="w-5 h-5" />
-                <span>(555) 123-4567</span>
+                <span>(847) 469-4068</span>
               </a>
               <Button 
                 onClick={() => scrollToSection('estimate')}
-                className="bg-[#4A9FF5] hover:bg-[#3B7FD9] text-white rounded-full w-full"
+                className="bg-[#1F3C88] hover:bg-[#152a5e] text-white rounded-full w-full"
               >
                 Get Free Estimate
               </Button>

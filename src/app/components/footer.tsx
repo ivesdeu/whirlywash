@@ -15,18 +15,13 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold text-white mb-4">Whirly Wash</h3>
-            <p className="text-gray-400 mb-4">
-              Lake County's trusted exterior cleaning company since 2009.
-            </p>
+            <p className="text-gray-400 mb-4">Lake County's trusted exterior cleaning company.</p>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/p/Whirly-Wash-61565659395544/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/whirlywash.llc/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -76,8 +71,8 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-400">
                 <Phone className="w-4 h-4" />
-                <a href="tel:+15551234567" className="hover:text-white transition-colors">
-                  (555) 123-4567
+                <a href="tel:+18474694068" className="hover:text-white transition-colors">
+                  (847) 469-4068
                 </a>
               </li>
               <li className="flex items-center gap-2 text-gray-400">

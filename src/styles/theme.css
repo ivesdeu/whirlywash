@@ -126,7 +126,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   /**
@@ -140,26 +140,30 @@
 
   h1 {
     font-size: var(--text-2xl);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-weight: 800;
+    line-height: 1.2;
+    font-family: 'Staatliches', sans-serif;
   }
 
   h2 {
     font-size: var(--text-xl);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-weight: 800;
+    line-height: 1.2;
+    font-family: 'Staatliches', sans-serif;
   }
 
   h3 {
     font-size: var(--text-lg);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-weight: 700;
+    line-height: 1.3;
+    font-family: 'Staatliches', sans-serif;
   }
 
   h4 {
     font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-weight: 700;
+    line-height: 1.4;
+    font-family: 'Staatliches', sans-serif;
   }
 
   label {

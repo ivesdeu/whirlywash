@@ -26,7 +26,7 @@ export function WhyChoose() {
   ];
 
   return (
-    <section id="why-choose" className="py-20 bg-[#4A9FF5] text-white">
+    <section id="why-choose" className="py-20 bg-[#1F3C88] text-white">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

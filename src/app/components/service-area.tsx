@@ -45,8 +45,8 @@ export function ServiceArea() {
             >
               <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center">
                 <div className="text-center">
-                  <MapPin className="w-16 h-16 text-[#4A9FF5] mx-auto mb-4" />
-                  <p className="text-2xl font-bold text-[#4A9FF5]">Lake County, IL</p>
+                  <MapPin className="w-16 h-16 text-[#1F3C88] mx-auto mb-4" />
+                  <p className="text-2xl font-bold text-[#1F3C88]">Lake County, IL</p>
                   <p className="text-gray-600 mt-2">& Surrounding Areas</p>
                 </div>
               </div>
@@ -56,18 +56,18 @@ export function ServiceArea() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg p-8"
+              className="bg-white rounded-2xl p-8 shadow-lg"
             >
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Areas We Serve</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Cities We Serve</h3>
               <div className="grid grid-cols-2 gap-4">
                 {locations.map((location, index) => (
                   <div
                     key={index}
                     className="flex items-center gap-2 text-gray-700"
                   >
-                    <div className="w-2 h-2 bg-[#4A9FF5] rounded-full" />
+                    <div className="w-2 h-2 bg-[#1F3C88] rounded-full" />
                     <span>{location}</span>
                   </div>
                 ))}

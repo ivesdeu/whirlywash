@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
+import beforeAfterImage from 'figma:asset/39e2340f7aa6994865d43f4392da9012f6cd3189.png';
 
 export function BeforeAfter() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -9,14 +10,16 @@ export function BeforeAfter() {
 
   const comparisons = [
     {
-      before: 'https://images.unsplash.com/photo-1759355787118-7b48305965d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdWJ1cmJhbiUyMGhvbWUlMjBiZWF1dGlmdWx8ZW58MXx8fHwxNzcyMzA0NzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      after: 'https://images.unsplash.com/photo-1768765397301-8a64df3d41ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob3VzZSUyMGV4dGVyaW9yJTIwY2xlYW58ZW58MXx8fHwxNzcyMzA0NzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'Complete Exterior Window Cleaning',
+      before: beforeAfterImage,
+      after: beforeAfterImage,
+      title: 'Professional Window Cleaning',
+      hasTag: true,
     },
     {
       before: 'https://images.unsplash.com/photo-1771079258782-b7212c442141?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMHJlc2lkZW50aWFsJTIwd2luZG93cyUyMGV4dGVyaW9yfGVufDF8fHx8MTc3MjMwNDc0MXww&ixlib=rb-4.1.0&q=80&w=1080',
       after: 'https://images.unsplash.com/photo-1771970472769-8038fd7309c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcmlvciUyMHdpbmRvd3MlMjBjbGVhbiUyMG1vZGVybnxlbnwxfHx8fDE3NzIzMDQ3NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
       title: 'Power Washing & Window Service',
+      hasTag: false,
     },
   ];
 

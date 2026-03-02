@@ -7,17 +7,17 @@ export function SocialProof() {
       icon: Star,
       value: '5.0',
       label: 'Google Rating',
-      subtext: '200+ Reviews',
+      subtext: '20+ Reviews',
     },
     {
       icon: Award,
-      value: '15+',
+      value: '2+',
       label: 'Years Experience',
       subtext: 'Trusted Local Business',
     },
     {
       icon: Home,
-      value: '5,000+',
+      value: '100+',
       label: 'Homes Serviced',
       subtext: 'In Lake County',
     },
@@ -25,7 +25,7 @@ export function SocialProof() {
       icon: ShieldCheck,
       value: '100%',
       label: 'Satisfaction',
-      subtext: 'Money-Back Guarantee',
+      subtext: 'Guaranteed.',
     },
   ];
 
@@ -43,9 +43,9 @@ export function SocialProof() {
               className="flex flex-col items-center text-center"
             >
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
-                <stat.icon className="w-6 h-6 text-[#4A9FF5]" />
+                <stat.icon className="w-6 h-6 text-[#1F3C88]" />
               </div>
-              <div className="text-3xl font-bold text-[#4A9FF5] mb-1">
+              <div className="text-3xl font-bold text-[#1F3C88] mb-1">
                 {stat.value}
               </div>
               <div className="text-gray-900 font-semibold mb-1">

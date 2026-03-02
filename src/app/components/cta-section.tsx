@@ -26,7 +26,7 @@ export function CTASection() {
   };
 
   return (
-    <section id="estimate" className="py-20 bg-gradient-to-br from-[#4A9FF5] to-[#3B7FD9] text-white">
+    <section id="estimate" className="py-20 bg-gradient-to-br from-[#1F3C88] to-[#152a5e] text-white">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -37,12 +37,10 @@ export function CTASection() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold mb-4">Ready for Spotless Windows?</h2>
-            <p className="text-xl text-blue-100 mb-6">
-              Get your free, no-obligation estimate today
-            </p>
-            <a href="tel:+15551234567" className="inline-flex items-center gap-2 text-2xl font-semibold hover:text-blue-200 transition-colors">
+            <p className="text-xl text-blue-100 mb-6">Get your estimate today</p>
+            <a href="tel:+18474694068" className="inline-flex items-center gap-2 text-2xl font-semibold hover:text-blue-200 transition-colors">
               <Phone className="w-6 h-6" />
-              (555) 123-4567
+              (847) 469-4068
             </a>
           </motion.div>
 
@@ -137,9 +135,9 @@ export function CTASection() {
 
               <Button
                 type="submit"
-                className="w-full bg-white hover:bg-gray-100 text-[#4A9FF5] py-6 text-lg rounded-full"
+                className="w-full bg-[#1F3C88] hover:bg-[#152a5e] text-white py-6 text-lg rounded-full"
               >
-                Get Your Free Estimate
+                Get Your Estimate
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </form>
