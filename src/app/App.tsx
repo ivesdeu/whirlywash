@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Header } from './components/header';
 import { Hero } from './components/hero';
 import { SocialProof } from './components/social-proof';
-import { FlagshipServices } from './components/flagship-services';
+import { PlanComparison } from './components/plan-comparison';
 import { Services } from './components/services';
 import { Footer } from './components/footer';
 
@@ -20,7 +20,7 @@ export default function App() {
       <main>
         <Hero />
         <SocialProof />
-        <FlagshipServices />
+        <PlanComparison />
         <Services />
         <Suspense fallback={<div className="h-96" />}>
           <WhyChoose />
