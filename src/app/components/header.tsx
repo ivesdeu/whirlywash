@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 
-// Logo: stored in public/images/Logo.png, loaded via URL (e.g. /images/Logo.png in git/deploy)
-const LOGO_URL = '/images/Logo.png';
+// Logo: stored in public/images/Logo.png, loaded via URL; ?v=2 bypasses cache after logo update
+const LOGO_URL = '/images/Logo.png?v=2';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
