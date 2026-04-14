@@ -1,10 +1,9 @@
-import { FormEvent, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { motion } from 'motion/react';
 import { Phone } from 'lucide-react';
 
 export function CTASection() {
   const [imageCount, setImageCount] = useState(0);
-  const [submitted, setSubmitted] = useState(false);
   const [arrivalTimes, setArrivalTimes] = useState<string[]>([]);
   const stateOptions = useMemo(
     () => [
@@ -21,11 +20,6 @@ export function CTASection() {
     setArrivalTimes(prev =>
       checked ? [...prev, value] : prev.filter(item => item !== value),
     );
-  };
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setSubmitted(true);
   };
 
   return (
@@ -54,7 +48,21 @@ export function CTASection() {
             viewport={{ once: true }}
             className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 text-slate-800"
           >
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form
+              className="space-y-6"
+              name="estimate-contact"
+              method="POST"
+              action="/"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              encType="multipart/form-data"
+            >
+              <input type="hidden" name="form-name" value="estimate-contact" />
+              <p className="hidden">
+                <label>
+                  Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                </label>
+              </p>
               <div>
                 <h3 className="text-xl font-semibold mb-4">Contact details</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -146,11 +154,6 @@ export function CTASection() {
                 <button type="submit" className="w-full md:w-auto rounded-md bg-[#1F3C88] px-5 py-2.5 text-white font-medium hover:bg-[#183171] transition-colors">
                   Request Estimate
                 </button>
-                {submitted && (
-                  <p className="mt-3 text-sm text-emerald-700">
-                    Thanks! Your request has been captured. We will follow up shortly.
-                  </p>
-                )}
               </div>
             </form>
           </motion.div>
