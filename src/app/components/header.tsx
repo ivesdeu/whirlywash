@@ -64,6 +64,12 @@ export function Header() {
             >
               Service Area
             </button>
+            <button
+              onClick={() => scrollToSection('estimate')}
+              className="text-gray-700 hover:text-[#1F3C88] font-medium py-2 px-3 rounded-md hover:bg-[#1F3C88]/10 hover:underline underline-offset-4 decoration-2 transition-colors transition-shadow"
+            >
+              Contact
+            </button>
           </nav>
 
           {/* CTA Buttons */}
@@ -118,6 +124,12 @@ export function Header() {
                 className="text-left text-gray-700 hover:text-[#1F3C88] font-medium py-3 px-3 rounded-md hover:bg-[#1F3C88]/10 transition-colors"
               >
                 Service Area
+              </button>
+              <button
+                onClick={() => scrollToSection('estimate')}
+                className="text-left text-gray-700 hover:text-[#1F3C88] font-medium py-3 px-3 rounded-md hover:bg-[#1F3C88]/10 transition-colors"
+              >
+                Contact
               </button>
               <a href="tel:+18474694068" className="flex items-center gap-2 text-[#1F3C88]">
                 <Phone className="w-5 h-5" />
