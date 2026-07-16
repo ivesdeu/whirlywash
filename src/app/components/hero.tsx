@@ -87,17 +87,16 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#1a2f4a]">
               <img
                 src={HERO_IMAGE_URL}
                 alt="Whirly Wash team - professional window cleaning"
-                className="w-full h-[500px] object-cover"
+                className="block w-full h-[500px] object-cover object-center scale-[1.02]"
                 width={1080}
                 height={500}
                 fetchPriority="high"
                 decoding="async"
               />
-              
             </div>
           </motion.div>
         </div>
