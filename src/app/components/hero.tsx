@@ -3,7 +3,8 @@ import { Phone, ArrowRight, Check } from 'lucide-react';
 import { Button } from './ui/button';
 
 // Hero image: stored in public/images/Hero_Image.png, loaded via URL (same as logo)
-const HERO_IMAGE_URL = '/images/Hero_Image.png';
+// ?v bumped to bust stale browser/CDN cache after updating the photo
+const HERO_IMAGE_URL = '/images/Hero_Image.png?v=2';
 
 export function Hero() {
   const scrollToEstimate = () => {
