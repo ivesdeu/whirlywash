@@ -34,12 +34,19 @@ export function Header() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
-            <img src={LOGO_URL} alt="Whirly Wash" className="h-24 w-auto" width={177} height={96} decoding="async" />
+          <div className="flex shrink-0 items-center">
+            <img
+              src={LOGO_URL}
+              alt="Whirly Wash"
+              className="h-16 w-auto max-w-none shrink-0 object-contain md:h-20 lg:h-24"
+              width={177}
+              height={96}
+              decoding="async"
+            />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-[#1F3C88] font-medium py-2 px-3 rounded-md hover:bg-[#1F3C88]/10 hover:underline underline-offset-4 decoration-2 transition-colors transition-shadow"
@@ -79,7 +86,7 @@ export function Header() {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <a href="tel:+18474694068" className="flex items-center gap-2 text-[#1F3C88]">
               <Phone className="w-5 h-5" />
               <span>(847) 469-4068</span>
@@ -92,7 +99,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -105,7 +112,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+          <nav className="lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <div className="flex flex-col gap-1">
               <button
                 onClick={() => scrollToSection('services')}
