@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 
-// Logo: stored in public/images/Logo.png, loaded via URL; ?v=2 bypasses cache after logo update
-const LOGO_URL = '/images/Logo.png?v=2';
+// Logo: stored in public/images/Logo.png, loaded via URL; ?v=3 bypasses cache after logo update
+const LOGO_URL = '/images/Logo.png?v=3';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +35,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={LOGO_URL} alt="Whirly Wash" className="h-24 w-auto" width={280} height={96} decoding="async" />
+            <img src={LOGO_URL} alt="Whirly Wash" className="h-24 w-auto" width={177} height={96} decoding="async" />
           </div>
 
           {/* Desktop Navigation */}
@@ -51,6 +51,12 @@ export function Header() {
               className="text-gray-700 hover:text-[#1F3C88] font-medium py-2 px-3 rounded-md hover:bg-[#1F3C88]/10 hover:underline underline-offset-4 decoration-2 transition-colors transition-shadow"
             >
               Why Us
+            </button>
+            <button
+              onClick={() => scrollToSection('about')}
+              className="text-gray-700 hover:text-[#1F3C88] font-medium py-2 px-3 rounded-md hover:bg-[#1F3C88]/10 hover:underline underline-offset-4 decoration-2 transition-colors transition-shadow"
+            >
+              About
             </button>
             <button
               onClick={() => scrollToSection('testimonials')}
@@ -112,6 +118,12 @@ export function Header() {
                 className="text-left text-gray-700 hover:text-[#1F3C88] font-medium py-3 px-3 rounded-md hover:bg-[#1F3C88]/10 transition-colors"
               >
                 Why Us
+              </button>
+              <button
+                onClick={() => scrollToSection('about')}
+                className="text-left text-gray-700 hover:text-[#1F3C88] font-medium py-3 px-3 rounded-md hover:bg-[#1F3C88]/10 transition-colors"
+              >
+                About
               </button>
               <button
                 onClick={() => scrollToSection('testimonials')}

@@ -20,7 +20,7 @@ export function TestimonialCard({ name, location, rating, review, link }: Testim
       </div>
 
       {/* Review Text */}
-      <p className="text-gray-700 mb-6 flex-grow italic">"{review}"</p>
+      <p className="text-gray-700 mb-6 flex-grow italic overflow-y-auto min-h-0">"{review}"</p>
 
       {/* Customer Info - no photo */}
       <div className="flex items-center justify-between">
@@ -41,7 +41,7 @@ export function TestimonialCard({ name, location, rating, review, link }: Testim
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col hover:shadow-xl transition-shadow cursor-pointer"
+        className="bg-white rounded-2xl p-8 shadow-lg h-full min-h-0 flex flex-col hover:shadow-xl transition-shadow cursor-pointer"
       >
         {content}
       </a>
@@ -49,7 +49,7 @@ export function TestimonialCard({ name, location, rating, review, link }: Testim
   }
 
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col">
+    <div className="bg-white rounded-2xl p-8 shadow-lg h-full min-h-0 flex flex-col">
       {content}
     </div>
   );

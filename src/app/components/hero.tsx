@@ -24,10 +24,10 @@ export function Hero() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Crystal Clear Windows. A{"\u00A0"}Cleaner Home. Zero Hassle.
+              CRYSTAL CLEAR WINDOWS WITHOUT THE HASSLE.
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Professional window cleaning serving Lake County.
+              Professional window cleaning services with the care, communication, and quality you’d expect from an owner-operated company.
             </p>
             
             {/* CTAs */}

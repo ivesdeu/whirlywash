@@ -7,7 +7,7 @@ export function Process() {
       icon: ClipboardCheck,
       number: '1',
       title: 'Request Estimate',
-      description: 'Fill out our quick form or give us a call. We\'ll provide a free, no-obligation quote within 24 hours.',
+      description: 'Fill out our quick form or give us a call. We\'ll provide a free, no-obligation quote as soon as possible.',
     },
     {
       icon: CalendarCheck,
@@ -19,7 +19,7 @@ export function Process() {
       icon: Sparkles,
       number: '3',
       title: 'Enjoy a Spotless Property',
-      description: 'Sit back and relax while our professional team transforms your home. 100% satisfaction guaranteed.',
+      description: 'Sit back and relax while we professionally transform your home. 100% satisfaction guaranteed.',
     },
   ];
 

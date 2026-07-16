@@ -108,23 +108,27 @@ export function Testimonials() {
         </motion.div>
 
         <div className="relative max-w-6xl mx-auto">
-          {/* Mobile: Single Card */}
-          <div className="block lg:hidden">
-            <TestimonialCard {...testimonials[currentIndex]} />
-          </div>
+          {/* Fixed-height track keeps nav arrows from jumping between slides */}
+          <div className="h-[420px]">
+            {/* Mobile: Single Card */}
+            <div className="block lg:hidden h-full">
+              <TestimonialCard {...testimonials[currentIndex]} />
+            </div>
 
-          {/* Desktop: Three Cards */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-8">
-            {getVisibleTestimonials().map((testimonial, index) => (
-              <motion.div
-                key={`${currentIndex}-${index}`}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
-                <TestimonialCard {...testimonial} />
-              </motion.div>
-            ))}
+            {/* Desktop: Three Cards */}
+            <div className="hidden lg:grid lg:grid-cols-3 gap-8 h-full">
+              {getVisibleTestimonials().map((testimonial, index) => (
+                <motion.div
+                  key={`${currentIndex}-${index}`}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  className="h-full min-h-0"
+                >
+                  <TestimonialCard {...testimonial} />
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           {/* Navigation */}

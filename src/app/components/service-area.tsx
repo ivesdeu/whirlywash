@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import { MapPin } from 'lucide-react';
 
 export function ServiceArea() {
   const locations = [
@@ -15,6 +14,10 @@ export function ServiceArea() {
     'Lake Bluff',
     'Lake Zurich',
     'Wauconda',
+    'Pleasant Prairie',
+    'Kenosha',
+    'Twin Lakes',
+    'Trevor',
   ];
 
   return (
@@ -29,30 +32,31 @@ export function ServiceArea() {
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Service Area</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Proudly serving Lake County and surrounding areas
+            Proudly serving northeastern Illinois and southeastern Wisconsin
           </p>
         </motion.div>
 
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Map Placeholder */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg"
+              className="bg-white rounded-2xl p-4 md:p-6 shadow-lg"
             >
-              <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-16 h-16 text-[#1F3C88] mx-auto mb-4" />
-                  <p className="text-2xl font-bold text-[#1F3C88]">Lake County, IL</p>
-                  <p className="text-gray-600 mt-2">& Surrounding Areas</p>
-                </div>
+              <div className="aspect-square overflow-hidden rounded-xl">
+                <iframe
+                  title="Whirly Wash service area map — northeastern Illinois and southeastern Wisconsin"
+                  src="https://www.google.com/maps?ll=42.5,-87.95&z=9&output=embed"
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
               </div>
             </motion.div>
 
-            {/* Cities List */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}

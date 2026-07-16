@@ -8,6 +8,7 @@ import { Footer } from './components/footer';
 
 // Lazy load below-the-fold components for better performance
 const WhyChoose = lazy(() => import('./components/why-choose').then(m => ({ default: m.WhyChoose })));
+const AboutUs = lazy(() => import('./components/about-us').then(m => ({ default: m.AboutUs })));
 const Process = lazy(() => import('./components/process').then(m => ({ default: m.Process })));
 const Testimonials = lazy(() => import('./components/testimonials').then(m => ({ default: m.Testimonials })));
 const ServiceArea = lazy(() => import('./components/service-area').then(m => ({ default: m.ServiceArea })));
@@ -24,6 +25,9 @@ export default function App() {
         <Services />
         <Suspense fallback={<div className="h-96" />}>
           <WhyChoose />
+        </Suspense>
+        <Suspense fallback={<div className="h-96" />}>
+          <AboutUs />
         </Suspense>
         <Suspense fallback={<div className="h-96" />}>
           <Process />

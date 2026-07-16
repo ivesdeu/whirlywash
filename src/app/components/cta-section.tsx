@@ -73,13 +73,13 @@ export function CTASection() {
                 </div>
 
                 <label className="mt-3 flex items-start gap-2 text-sm leading-5">
-                  <input name="marketingEmailOptIn" type="checkbox" className="mt-1" />
+                  <input name="marketingEmailOptIn" type="checkbox" defaultChecked className="mt-1" />
                   <span>I&apos;d like to receive marketing emails from Whirly Wash. Unsubscribe at any time.</span>
                 </label>
 
                 <input name="phone" type="tel" required placeholder="Phone" className="mt-3 w-full rounded-md border border-slate-300 px-3 py-2" />
                 <label className="mt-2 flex items-start gap-2 text-sm leading-5">
-                  <input name="marketingSmsOptIn" type="checkbox" className="mt-1" />
+                  <input name="marketingSmsOptIn" type="checkbox" defaultChecked className="mt-1" />
                   <span>
                     By providing your phone number, you agree to receive Visit Reminders and other transactional text messages (SMS) from Whirly Wash.
                     You can unsubscribe at any time by replying STOP. Message and data rates may apply. Message frequency varies. Reply HELP for help or STOP to cancel.

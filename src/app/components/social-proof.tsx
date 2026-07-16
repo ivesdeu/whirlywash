@@ -7,25 +7,25 @@ export function SocialProof() {
       icon: Star,
       value: '5.0',
       label: 'Google Rating',
-      subtext: '20+ Reviews',
+      subtext: '40+ reviews',
     },
     {
       icon: Award,
       value: '2+',
-      label: 'Years Experience',
-      subtext: 'Trusted Local Business',
+      label: 'Yrs Experience',
+      subtext: '',
     },
     {
       icon: Home,
       value: '500+',
       label: 'Homes Serviced',
-      subtext: 'In Lake County',
+      subtext: '',
     },
     {
       icon: ShieldCheck,
       value: '100%',
-      label: 'Satisfaction',
-      subtext: 'Guaranteed.',
+      label: 'Satisfaction Guaranteed',
+      subtext: '',
     },
   ];
 
@@ -51,9 +51,11 @@ export function SocialProof() {
               <div className="text-gray-900 font-semibold mb-1">
                 {stat.label}
               </div>
-              <div className="text-sm text-gray-600">
-                {stat.subtext}
-              </div>
+              {stat.subtext ? (
+                <div className="text-sm text-gray-600">
+                  {stat.subtext}
+                </div>
+              ) : null}
             </motion.div>
           ))}
         </div>
